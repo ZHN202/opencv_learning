@@ -1,6 +1,6 @@
 import numpy as np
 import cv2 as cv
-import mpl
+from practise import mpl
 
 # 读取图片
 img = cv.imread('test2.jpg')

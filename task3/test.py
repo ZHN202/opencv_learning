@@ -1,4 +1,4 @@
-import mpl
+from practise import mpl
 import cv2 as cv
 
 yellowLight = cv.imread("task3-2.png")
@@ -23,12 +23,12 @@ ret, redLightBin = cv.threshold(redLightGray, 50, 255, cv.THRESH_BINARY)
 imgs = [greenLightBin, yellowLightBin, redLightBin]
 titles = ["gb", "yb", "rb"]
 mpl.showimages(imgs, titles)
-mpl.showimages(yellowLightBin,['y'])
+mpl.showimages(yellowLightBin, ['y'])
 
 # HSV
-ylHSV = cv.cvtColor(yellowLight,cv.COLOR_BGR2HSV)
-glHSV = cv.cvtColor(greenLight,cv.COLOR_BGR2HSV)
-redHSV = cv.cvtColor(redLight,cv.COLOR_BGR2HSV)
-imgs = [glHSV,ylHSV,redHSV]
-titles = ["y","g","r"]
-mpl.showimages(imgs,titles)
+ylHSV = cv.cvtColor(yellowLight, cv.COLOR_BGR2HSV)
+glHSV = cv.cvtColor(greenLight, cv.COLOR_BGR2HSV)
+redHSV = cv.cvtColor(redLight, cv.COLOR_BGR2HSV)
+imgs = [glHSV, ylHSV, redHSV]
+titles = ["y", "g", "r"]
+mpl.showimages(imgs, titles)
